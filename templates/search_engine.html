@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>永驻的搜索引擎</title>
+</head>
+<body>
+
+    <form action="/search_show" method="post">
+        <input type="text" placeholder="请输入" name="searchWord" id="">
+        <input type="submit" value="搜索一下">
+
+    </form>
+
+
+
+
+
+{% for i in list%}
+    <h2 text-align:center><a href="{{i['url']}}">{{i["title"]}}</a></h2>
+
+<br>
+摘要:{{i["summary"]}}
+<br>
+    原始链接:<a href="{{i['url']}}">{{i['url']}}</a>
+
+<br>
+    <br>
+
+<hr/>
+{% endfor %}
+</body>
+</html>

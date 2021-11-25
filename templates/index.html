@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>永驻的搜索引擎</title>
+		<link rel="shortcut icon" href="Images/search.ico" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/home.css')}}">
+	    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/fontawesome.css')}}">
+		<link href="{{url_for('static', filename='https://fonts.googleapis.com/css?family=Roboto:300')}}" rel="stylesheet">
+	</head>
+
+	<body>
+
+	    <div id="webpage">
+	        <div id="menuholder">
+	            <a class="menu" href="#0" onclick="init();"><span class="fa fa-globe"></span> Web</a>
+	            <a class="menu" href="#0" onclick="imgmode();"><span class="fa fa-picture-o"></span> Images</a>
+	            <a class="menu" href="#0" onclick="ytmode();"><span class="fa fa-youtube-play"></span> Youtube</a>
+	            <a class="menu" href="https://www.google.com/maps"><span class="fa fa-map-marker"></span> Maps</a>
+	            <a class="menu" href="https://drive.google.com"><span class="fa fa-upload"></span> Drive</a>
+	            <a class="menu" href="https://www.google.com/calendar"><span class="fa fa-calendar"></span> Calendar</a>
+	            <a class="menu" href="https://mail.google.com"><span class="fa fa-envelope"></span> Gmail</a>
+	            <a class="menu" href="https://play.google.com/store"><span class="fa fa-play"></span> Play Store</a>
+	            <a class="menu" href="https://myaccount.google.com/"><span class="fa fa-user"></span> Account</a>
+	        </div>
+			<form action="/search_show" method="post">
+	        <input id="srch" name="searchWord" type="text" placeholder="请输入" autocomplete="off" maxlength="255" onkeydown="return openurl(event);"
+	            autofocus />
+
+			</form>
+		</div>
+
+<!--	    <script src="JS/control.js"></script>-->
+
+<!--{% for i in list%}-->
+<!--    <h2 text-align:center>{{i["title"]}}</h2>-->
+
+<!--<br>-->
+<!--摘要:{{i["summary"]}}-->
+<!--<br>-->
+<!--    原始链接:<a href="{{i['url']}}">{{i['url']}}</a>-->
+
+<!--<br>-->
+<!--    <br>-->
+
+<!--<hr/>-->
+<!--{% endfor %}-->
+
+	</body>
+</html>
